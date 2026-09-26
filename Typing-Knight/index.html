@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Typing Knight</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game">
+
+        <!-- HEADER -->
+        <header class="header">
+            <h1>⚔️ TYPING KNIGHT</h1>
+
+            <p>
+                Ketik kata dengan cepat untuk mengalahkan monster!
+            </p>
+        </header>
+
+
+        <!-- STATUS GAME -->
+        <div class="status">
+
+            <div class="status-box">
+                <span>LEVEL</span>
+                <strong id="level">1</strong>
+            </div>
+
+            <div class="status-box">
+                <span>SKOR</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="status-box">
+                <span>WAKTU</span>
+                <strong id="time">10</strong>
+            </div>
+
+            <div class="status-box">
+                <span>KATA</span>
+                <strong id="wordCount">0</strong>
+            </div>
+
+        </div>
+
+
+        <!-- AREA PERTARUNGAN -->
+        <div class="battle">
+
+            <!-- PEMAIN -->
+            <div class="character">
+
+                <div class="character-image">
+                    🛡️
+                </div>
+
+                <h2>KSATRIA</h2>
+
+                <div class="health-container">
+
+                    <div
+                        id="playerHealth"
+                        class="health player-health">
+                    </div>
+
+                </div>
+
+                <p id="playerHealthText">
+                    HP: 100 / 100
+                </p>
+
+            </div>
+
+
+            <!-- VS -->
+            <div class="vs">
+                ⚔️
+                <span>VS</span>
+                ⚔️
+            </div>
+
+
+            <!-- MONSTER -->
+            <div class="character">
+
+                <div class="character-image">
+                    👹
+                </div>
+
+                <h2>MONSTER</h2>
+
+                <div class="health-container">
+
+                    <div
+                        id="monsterHealth"
+                        class="health monster-health">
+                    </div>
+
+                </div>
+
+                <p id="monsterHealthText">
+                    HP: 100 / 100
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- AREA GAME -->
+        <div class="game-area">
+
+            <p class="instruction">
+                KETIK KATA BERIKUT:
+            </p>
+
+            <div id="word" class="word">
+                TEKAN MULAI
+            </div>
+
+
+            <input
+                type="text"
+                id="typingInput"
+                placeholder="Ketik kata di sini..."
+                autocomplete="off"
+                disabled
+            >
+
+
+            <button
+                id="startButton"
+                onclick="startGame()">
+                ⚔️ MULAI GAME
+            </button>
+
+
+            <p id="message" class="message">
+                Siapkan jari kamu!
+            </p>
+
+        </div>
+
+
+        <!-- PETUNJUK -->
+        <div class="instructions-box">
+
+            <h3>📖 Cara Bermain</h3>
+
+            <ol>
+                <li>Klik tombol <b>MULAI GAME</b>.</li>
+
+                <li>
+                    Kata akan muncul di layar.
+                </li>
+
+                <li>
+                    Ketik kata tersebut dengan benar.
+                </li>
+
+                <li>
+                    Jika benar, ksatria akan menyerang monster.
+                </li>
+
+                <li>
+                    Jika waktu habis, monster akan menyerang.
+                </li>
+
+                <li>
+                    Kalahkan monster untuk naik level.
+                </li>
+            </ol>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer>
+            <p>
+                © 2026 Typing Knight
+            </p>
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
